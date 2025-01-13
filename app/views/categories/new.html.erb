@@ -1,1 +1,8 @@
-<h1> Add a new category here </h1>
+<div class="container mt-4">
+  <h1> Add a new category here </h1>
+
+  <%= simple_form_for @category do |f| %>
+    <%= f.input :name %>
+    <%= f.submit "Add category", class: "btn btn-primary" %>
+  <% end %>
+</div>

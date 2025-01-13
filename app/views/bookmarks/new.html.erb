@@ -1,1 +1,9 @@
-<h1>Add a Movie to <%= @category.name %></h1>
+<div class="container mt-4">
+  <h1>Add a Recipe to <%= @category.name %></h1>
+
+  <%= simple_form_for [@category, @bookmark] do |f| %>
+    <%= f.association :recipe %>
+    <%= f.input :comment %>
+    <%= f.submit "Add recipe", class: "btn btn-primary" %>
+  <% end %>
+</div>
