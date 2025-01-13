@@ -1,1 +1,20 @@
-<h1> <%= @category.name %> </h1>
+<div class="container">
+  <h1><%= @category.name %></h1>
+  <ul class="bookmarks">
+    <% @category.bookmarks.each do |bookmark| %>
+      <li>
+        <div class="bookmark-info">
+          <div class="title"><%= bookmark.recipe.name %></div>
+          <div class="comment"><%= bookmark.comment %></div>
+        </div>
+        <div class="actions">
+          <%= button_to "Delete",
+              bookmark_path(bookmark),
+              method: :delete,
+              class: "btn btn-danger" %>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+  <%= link_to "Add a recipe", new_category_bookmark_path(@category), class: "btn btn-primary" %>
+</div>
