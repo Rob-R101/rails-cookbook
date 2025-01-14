@@ -1,5 +1,10 @@
 <div class="container">
   <h1><%= @category.name %></h1>
+
+  <%= link_to categories_path, class: "btn btn-secondary mb-3" do %>
+    <i class="fas fa-arrow-left"></i> Back to categories
+  <% end %>
+
   <ul class="bookmarks">
     <% @category.bookmarks.each do |bookmark| %>
       <li>
