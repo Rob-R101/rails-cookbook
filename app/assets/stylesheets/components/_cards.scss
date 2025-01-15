@@ -1,35 +1,47 @@
+// Existing Styles for Card Category
 .card-category {
-  background-size: cover;
-  background-position: center;
-  height: 180px;
+  color: black;
+  height: 90px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
   font-size: 24px;
   font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   position: relative;
-  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg');
 
   .card-actions {
     position: absolute;
     bottom: 10px;
     right: 10px;
   }
+
+  .recipe-rating {
+    position: absolute;
+    bottom: 10px;    /* Position the rating near the bottom */
+    left: 10px;      /* Position the rating to the left */
+    font-size: 14px; /* Adjust font size if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: Add a semi-transparent background */
+    color: white;    /* Set the text color */
+    padding: 5px;    /* Add some padding around the text */
+    border-radius: 5px; /* Optional: Round the corners */
+  }
 }
 
+// Card Recipe Styles
 .card-recipe {
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   overflow: hidden;
   height: 100%;
+  position: relative;
 
   .card-recipe-content {
     padding: 16px;
+    margin-bottom: 30px;
 
     h3 {
       font-size: 18px;
@@ -51,12 +63,35 @@
     display: flex;
     justify-content: flex-end;
   }
+
+  .card-recipe-footer {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    margin-top: 10px;
+  }
+
+  .recipe-rating {
+    font-size: 14px;
+    background-color: rgba(0, 0, 0, 0.6); /* Optional: semi-transparent background */
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+  .recipe-delete {
+    text-align: right;
+    font-size: 14px;
+  }
 }
 
-.card-recipe img {
+// Recipe Image Styles
+.recipe-img {
   width: 100%;
-  height: auto;
-  max-height: 200px;
+  height: 200px;
   object-fit: cover;
-  border-radius: 4px;
+  border-radius: 8px;
 }

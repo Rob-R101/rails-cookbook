@@ -1,4 +1,4 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://media.istockphoto.com/id/1184856288/photo/people-eating-and-drinking-wine-at-thanksgiving-celebration-dinner-table.jpg?b=1&s=612x612&w=0&k=20&c=fLrnG5Y25p2zGmfRgaGY-T9HLLstkrCt1OfYqwYnWGM=);">
   <div class="container">
     <h1><%= @category.name %></h1>
     <p>Discover all your favorite recipes in this category</p>
@@ -11,17 +11,22 @@
     <% @category.bookmarks.each do |bookmark| %>
       <div class="col-12 col-sm-6 col-md-4 mb-4">
         <div class="card-recipe">
-        <img src="<%= bookmark.recipe.image_url %>" alt="Recipe Image" class="recipe-img">
+          <img src="<%= bookmark.recipe.image_url %>" alt="Recipe Image" class="recipe-img">
           <div class="card-recipe-content">
             <h3><%= bookmark.recipe.name %></h3>
             <p><%= bookmark.comment %></p>
           </div>
-          <div class="card-recipe-actions">
-            <%= link_to bookmark_path(bookmark),
-                data: { turbo_method: :delete, turbo_confirm: "Are you sure?" },
-                class: "btn btn-danger" do %>
-              <i class="fa-solid fa-trash"></i> Delete
-            <% end %>
+          <div class="card-recipe-footer">
+            <div class="recipe-rating">
+              Rating: <%= bookmark.recipe.rating || 'No rating' %>
+            </div>
+            <div class="recipe-delete">
+              <%= link_to bookmark_path(bookmark),
+                  data: { turbo_method: :delete, turbo_confirm: "Are you sure?" },
+                  class: "btn btn-danger btn-sm" do %>
+                <i class="fa-solid fa-trash"></i> Delete
+              <% end %>
+            </div>
           </div>
         </div>
       </div>
