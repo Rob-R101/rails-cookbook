@@ -10,6 +10,13 @@
     font-weight: bold;
     margin-bottom: 20px;
   }
+
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+  }
 }
 
 .form-new {
@@ -18,12 +25,6 @@
   border-radius: 8px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 
-  h2 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-align: center;
-  }
 
   .form-control {
     background: white;
