@@ -14,20 +14,18 @@ class BookmarksController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
+  end
 
-    def destroy
-      @bookmark = Bookmark.find(params[:id])
-      @bookmark.destroy
-      redirect_to category_path(@bookmark.category), notice: "Bookmark was successfully deleted."
-    end
+  def destroy
+    @bookmark = Bookmark.find(params[:id])
+    @bookmark.destroy
+    redirect_to category_path(@bookmark.category), notice: "Bookmark was successfully deleted."
   end
 
   private
 
   def bookmark_params
-    params.require(:bookmark).permit(:recipe_id, :comment)
+    params.require(:bookmark).permit(:recipe_id, :comment, :photo)
   end
 
-  def redundant_to_change
-  end
 end
