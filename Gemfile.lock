@@ -326,7 +326,7 @@ DEPENDENCIES
   bootsnap
   bootstrap (~> 5.2)
   capybara
-  cloudinary (~> 1.21.0)
+  cloudinary
   debug
   dotenv-rails
   font-awesome-sass (~> 6.1)
