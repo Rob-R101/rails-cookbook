@@ -17,28 +17,28 @@ puts "Creating recipes..."
 carbonara = Recipe.create!(
   name: "Spaghetti Carbonara",
   description: "A true Italian Carbonara recipe, ready in about 30 minutes. Made with eggs, pecorino romano, guanciale and black pepper.",
-  image_url: "https://images.pexels.com/photos/12557557/pexels-photo-12557557.jpeg?auto=compress&cs=tinysrgb&w=600",
+  image_url: "https://images.pexels.com/photos/2703468/pexels-photo-2703468.jpeg?auto=compress&cs=tinysrgb&w=600",
   rating: 8.5
 )
 
 ratatouille = Recipe.create!(
   name: "Ratatouille",
   description: "A classic French Provençal stewed vegetable dish made with tomatoes, zucchini, eggplant, bell peppers, and herbs.",
-  image_url: "https://example.com/ratatouille.jpg",
+  image_url: "https://images.pexels.com/photos/5190684/pexels-photo-5190684.jpeg?auto=compress&cs=tinysrgb&w=600",
   rating: 7.8
 )
 
 caesar_salad = Recipe.create!(
   name: "Caesar Salad",
   description: "Crisp romaine lettuce, creamy dressing, parmesan cheese, and crunchy croutons make up this classic salad.",
-  image_url: "https://example.com/caesar.jpg",
+  image_url: "https://images.pexels.com/photos/2097090/pexels-photo-2097090.jpeg?auto=compress&cs=tinysrgb&w=600",
   rating: 7.2
 )
 
 croissant = Recipe.create!(
   name: "Classic French Croissants",
   description: "Buttery, flaky, and golden-brown French pastries. Perfect for breakfast.",
-  image_url: "https://example.com/croissant.jpg",
+  image_url: "https://images.pexels.com/photos/11961854/pexels-photo-11961854.jpeg?auto=compress&cs=tinysrgb&w=600",
   rating: 9.1
 )
 
