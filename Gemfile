@@ -31,7 +31,7 @@ gem 'cloudinary', '~> 1.21.0'
 gem 'active_storage_validations'
 
 
-gem "bootstrap", "~> 5.3.0"
+gem "bootstrap", "~> 5.2"
 gem "autoprefixer-rails"
 gem "font-awesome-sass", "~> 6.1"
 gem "simple_form"
