@@ -27,4 +27,7 @@ class BookmarksController < ApplicationController
   def bookmark_params
     params.require(:bookmark).permit(:recipe_id, :comment)
   end
+
+  def redundant_to_change
+  end
 end
