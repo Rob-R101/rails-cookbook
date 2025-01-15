@@ -1,8 +1,24 @@
-<div class="container mt-4">
-  <h1> Add a new category here </h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+  <div class="container">
+    <h1>Create a New Category</h1>
+    <p>Organize your recipes the way you like</p>
+  </div>
+</div>
 
-  <%= simple_form_for @category do |f| %>
-    <%= f.input :name %>
-    <%= f.submit "Add category", class: "btn btn-primary" %>
-  <% end %>
+<div class="container mt-4">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-6">
+      <div class="form-new">
+        <h2>New Category</h2>
+        <%= simple_form_for @category do |f| %>
+          <%= f.input :name, placeholder: 'Italian, Asian, Desserts...' %>
+          <%= f.submit class: "btn btn-flat w-100" %>
+        <% end %>
+
+        <%= link_to categories_path, class: "btn btn-ghost w-100 mt-3" do %>
+          <i class="fa-solid fa-arrow-left"></i> Back to categories
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>

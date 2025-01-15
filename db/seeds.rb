@@ -17,7 +17,7 @@ puts "Creating recipes..."
 carbonara = Recipe.create!(
   name: "Spaghetti Carbonara",
   description: "A true Italian Carbonara recipe, ready in about 30 minutes. Made with eggs, pecorino romano, guanciale and black pepper.",
-  image_url: "https://example.com/carbonara.jpg",
+  image_url: "https://images.pexels.com/photos/12557557/pexels-photo-12557557.jpeg?auto=compress&cs=tinysrgb&w=600",
   rating: 8.5
 )
 

@@ -1,25 +1,34 @@
-<div class="container">
-  <h1><%= @category.name %></h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+  <div class="container">
+    <h1><%= @category.name %></h1>
+    <p>Discover all your favorite recipes in this category</p>
+    <%= link_to "Add a recipe", new_category_bookmark_path(@category), class: "btn btn-flat" %>
+  </div>
+</div>
 
-  <%= link_to categories_path, class: "btn btn-secondary mb-3" do %>
-    <i class="fas fa-arrow-left"></i> Back to categories
-  <% end %>
-
-  <ul class="bookmarks">
+<div class="container mt-4">
+  <div class="row justify-content-between">
     <% @category.bookmarks.each do |bookmark| %>
-      <li>
-        <div class="bookmark-info">
-          <div class="title"><%= bookmark.recipe.name %></div>
-          <div class="comment"><%= bookmark.comment %></div>
+      <div class="col-12 col-sm-6 col-md-4 mb-4">
+        <div class="card-recipe">
+        <img src="<%= bookmark.recipe.image_url %>" alt="Recipe Image" class="recipe-img">
+          <div class="card-recipe-content">
+            <h3><%= bookmark.recipe.name %></h3>
+            <p><%= bookmark.comment %></p>
+          </div>
+          <div class="card-recipe-actions">
+            <%= link_to bookmark_path(bookmark),
+                data: { turbo_method: :delete, turbo_confirm: "Are you sure?" },
+                class: "btn btn-danger" do %>
+              <i class="fa-solid fa-trash"></i> Delete
+            <% end %>
+          </div>
         </div>
-        <div class="actions">
-          <%= button_to "Delete",
-              bookmark_path(bookmark),
-              method: :delete,
-              class: "btn btn-danger" %>
-        </div>
-      </li>
+      </div>
     <% end %>
-  </ul>
-  <%= link_to "Add a recipe", new_category_bookmark_path(@category), class: "btn btn-primary" %>
+  </div>
+
+  <%= link_to categories_path, class: "btn btn-ghost mt-4" do %>
+    <i class="fa-solid fa-arrow-left"></i> Back to categories
+  <% end %>
 </div>
