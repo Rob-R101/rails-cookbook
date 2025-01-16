@@ -28,8 +28,8 @@ def recipe_builder(id)
   )
 end
 
-dessert = Category.create!(name: "dessert")
-Bookmark.create!(comment: "This is a dessert", recipe: Recipe.all[0], category: dessert)
+#dessert = Category.create!(name: "dessert")
+#Bookmark.create!(comment: "This is a dessert", recipe: Recipe.all[0], category: dessert)
 
 categories.each do |category|
   url = "https://www.themealdb.com/api/json/v1/1/filter.php?c=#{category}"

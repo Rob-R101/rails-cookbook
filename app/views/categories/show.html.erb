@@ -16,7 +16,8 @@
          class="recipe-img">
           <div class="card-recipe-content">
             <h3><%= bookmark.recipe.name %></h3>
-            <p><%= bookmark.recipe.description %></p>
+            <p><%= truncate(bookmark.recipe.description, length: 100) %></p>
+            <p><%= bookmark.comment %></p>
           </div>
           <div class="card-recipe-footer">
             <div class="recipe-rating">
