@@ -1,0 +1,11 @@
+development:
+  cloud_name: "dwxe3ladl"
+  api_key: "525827231768933"
+  api_secret: "ov-jTsZBfO_MTdSHqNAvfLsFYOk"
+  secure: true
+
+production:
+  cloud_name: "dwxe3ladl"
+  api_key: "525827231768933"
+  api_secret: "ov-jTsZBfO_MTdSHqNAvfLsFYOk"
+  secure: true

@@ -1,10 +1,11 @@
 <div class="container mt-4">
   <h1>Add a Recipe to <%= @category.name %></h1>
 
-  <%= simple_form_for [@category, @bookmark] do |f| %>
+  <%= simple_form_for [@category, @bookmark], html: { multipart: true } do |f| %>
     <%= f.association :recipe %>
     <%= f.input :comment %>
     <%= f.input :photo, as: :file %>
     <%= f.submit "Add recipe", class: "btn btn-primary" %>
   <% end %>
+
 </div>

@@ -17,6 +17,12 @@ Rails.application.configure do
   # Enable server timing
   config.server_timing = true
 
+  #cloudinary credentials configuration
+config.cloudinary = {
+  cloud_name: Rails.application.credentials.dig(:cloudinary, :cloud_name),
+  api_key: Rails.application.credentials.dig(:cloudinary, :api_key),
+  api_secret: Rails.application.credentials.dig(:cloudinary, :api_secret)
+}
 
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.

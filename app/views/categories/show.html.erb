@@ -11,10 +11,12 @@
     <% @category.bookmarks.each do |bookmark| %>
       <div class="col-12 col-sm-6 col-md-4 mb-4">
         <div class="card-recipe">
-          <img src="<%= bookmark.recipe.image_url %>" alt="Recipe Image" class="recipe-img">
+        <img src="<%= bookmark.photo.attached? ? url_for(bookmark.photo) : (bookmark.recipe.image_url || '/images/food/pexels-nadin-sh-78971847-12918198.jpg') %>"
+         alt="Recipe Image"
+         class="recipe-img">
           <div class="card-recipe-content">
             <h3><%= bookmark.recipe.name %></h3>
-            <p><%= bookmark.comment %></p>
+            <p><%= bookmark.recipe.description %></p>
           </div>
           <div class="card-recipe-footer">
             <div class="recipe-rating">
